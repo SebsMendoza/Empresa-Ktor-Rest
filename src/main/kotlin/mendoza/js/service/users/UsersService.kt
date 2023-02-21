@@ -4,7 +4,7 @@ import kotlinx.coroutines.flow.Flow
 import mendoza.js.models.User
 import java.util.UUID
 
-interface UsuarioService {
+interface UsersService {
     suspend fun findAll(limit: Int?): Flow<User>
     suspend fun findById(id: UUID): User
     suspend fun findByUsername(username: String): User?

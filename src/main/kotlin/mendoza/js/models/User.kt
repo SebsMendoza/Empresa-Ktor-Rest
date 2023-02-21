@@ -3,7 +3,7 @@ package mendoza.js.models
 import java.time.LocalDateTime
 import java.util.*
 
-data class Usuario(
+data class User(
     val id: UUID = UUID.randomUUID(),
     val nombre: String,
     val email: String,

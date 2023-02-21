@@ -1,27 +1,44 @@
 package mendoza.js.plugins
 
+import io.ktor.http.*
+import io.ktor.server.application.*
 import io.ktor.server.auth.*
 import io.ktor.server.auth.jwt.*
-import com.auth0.jwt.JWT
-import com.auth0.jwt.algorithms.Algorithm
-import io.ktor.server.application.*
+import io.ktor.server.response.*
+import mendoza.js.config.TokenConfig
+import mendoza.js.service.tokens.TokensService
+import org.koin.core.parameter.parametersOf
+import org.koin.ktor.ext.get
+import org.koin.ktor.ext.inject
 
 fun Application.configureSecurity() {
-    
+    val tokenConfigParams = mapOf<String, String>(
+        "audience" to environment.config.property("jwt.audience").getString(),
+        "secret" to environment.config.property("jwt.secret").getString(),
+        "issuer" to environment.config.property("jwt.issuer").getString(),
+        "realm" to environment.config.property("jwt.realm").getString(),
+        "expiration" to environment.config.property("jwt.expiration").getString()
+    )
+
+    val tokenConfig: TokenConfig = get { parametersOf(tokenConfigParams) }
+    val jwtService: TokensService by inject()
+
     authentication {
-            jwt {
-                val jwtAudience = this@configureSecurity.environment.config.property("jwt.audience").getString()
-                realm = this@configureSecurity.environment.config.property("jwt.realm").getString()
-                verifier(
-                    JWT
-                        .require(Algorithm.HMAC256("secret"))
-                        .withAudience(jwtAudience)
-                        .withIssuer(this@configureSecurity.environment.config.property("jwt.domain").getString())
-                        .build()
+        jwt {
+            verifier(jwtService.verifyJWT())
+            realm = tokenConfig.realm
+            validate { credential ->
+                if (credential.payload.audience.contains(tokenConfig.audience) &&
+                    credential.payload.getClaim("username").asString().isNotEmpty()
                 )
-                validate { credential ->
-                    if (credential.payload.audience.contains(jwtAudience)) JWTPrincipal(credential.payload) else null
-                }
+                    JWTPrincipal(credential.payload)
+                else null
+            }
+
+            challenge { defaultScheme, realm ->
+                call.respond(HttpStatusCode.Unauthorized, "Token invalido o expirado")
             }
         }
+    }
+
 }

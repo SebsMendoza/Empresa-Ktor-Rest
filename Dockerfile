@@ -17,6 +17,6 @@ RUN mkdir /app
 RUN mkdir /cert
 COPY --from=build /home/gradle/src/cert/* /cert/
 # Copiamos el JAR de la aplicación
-COPY --from=build /home/gradle/src/build/libs/tenistas-rest-ktor-all.jar /app/tenistas-rest-ktor.jar
+COPY --from=build /home/gradle/src/build/libs/Empresa-Ktor-Rest-all.jar /app/empresa-ktor-rest.jar
 # Ejecutamos la aplicación, y le pasamos los argumentos si tiene
-ENTRYPOINT ["java","-jar","/app/tenistas-rest-ktor.jar"]
+ENTRYPOINT ["java","-jar","/app/empresa-ktor-rest.jar"]

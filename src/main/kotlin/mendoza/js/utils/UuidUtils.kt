@@ -1,4 +1,4 @@
-package joseluisgs.es.utils
+package mendoza.js.utils
 
 import java.util.*
 

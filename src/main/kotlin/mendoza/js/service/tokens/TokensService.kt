@@ -1,10 +1,10 @@
-package joseluisgs.es.services.tokens
+package mendoza.js.service.tokens
 
 import com.auth0.jwt.JWT
 import com.auth0.jwt.JWTVerifier
 import com.auth0.jwt.algorithms.Algorithm
-import joseluisgs.es.config.TokenConfig
-import joseluisgs.es.models.User
+import mendoza.js.config.TokenConfig
+import mendoza.js.models.User
 import mu.KotlinLogging
 import org.koin.core.annotation.Single
 import java.util.*
@@ -25,11 +25,9 @@ class TokensService(
             .withAudience(tokenConfig.audience)
             .withIssuer(tokenConfig.issuer)
             .withSubject("Authentication")
-            // claims de usuario
             .withClaim("username", user.username)
             .withClaim("usermail", user.email)
             .withClaim("userId", user.id.toString())
-            // claims de tiempo de expiración milisegundos desde 1970 + (tiempo en segundos) * 1000 (milisegundos)
             .withExpiresAt(
                 Date(System.currentTimeMillis() + tokenConfig.expiration * 1000L)
             )

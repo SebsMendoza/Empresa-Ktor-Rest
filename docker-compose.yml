@@ -2,7 +2,7 @@ version: "3.7"
 services:
   ktor-api-rest:
     build: .
-    container_name: ktor-api-rest
+    container_name: empresa-ktor-rest
     ports:
       - "6969:6969"
       - "6963:6963"

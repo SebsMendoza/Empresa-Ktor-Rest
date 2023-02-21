@@ -1,4 +1,4 @@
-package joseluisgs.es.config
+package mendoza.js.config
 
 import mu.KotlinLogging
 import org.koin.core.annotation.InjectedParam

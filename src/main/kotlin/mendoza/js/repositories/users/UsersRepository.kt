@@ -1,8 +1,8 @@
-package joseluisgs.es.repositories.users
+package mendoza.js.repositories.users
 
-import joseluisgs.es.models.User
-import joseluisgs.es.repositories.CrudRepository
 import kotlinx.coroutines.flow.Flow
+import mendoza.js.models.User
+import mendoza.js.repositories.CrudRepository
 import java.util.*
 
 interface UsersRepository : CrudRepository<User, UUID> {

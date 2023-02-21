@@ -4,20 +4,20 @@ import org.ufoss.kotysa.h2.H2Table
 import java.time.LocalDateTime
 import java.util.UUID
 
-object UsuariosTable : H2Table<UsuarioEntity>("usuarios") {
-    val id = uuid(UsuarioEntity::id).primaryKey()
-    val nombre = varchar(UsuarioEntity::nombre, size = 100)
-    val email = varchar(UsuarioEntity::email, size = 100)
-    val username = varchar(UsuarioEntity::username, size = 50)
-    val password = varchar(UsuarioEntity::password, size = 100)
-    val avatar = varchar(UsuarioEntity::avatar, size = 100)
-    val role = varchar(UsuarioEntity::role, size = 100)
-    val createdAt = timestamp(UsuarioEntity::createdAt, "created_at")
-    val updatedAt = timestamp(UsuarioEntity::updatedAt, "updated_at")
-    val deleted = boolean(UsuarioEntity::deleted)
+object UsersTable : H2Table<UserEntity>("usuarios") {
+    val id = uuid(UserEntity::id).primaryKey()
+    val nombre = varchar(UserEntity::nombre, size = 100)
+    val email = varchar(UserEntity::email, size = 100)
+    val username = varchar(UserEntity::username, size = 50)
+    val password = varchar(UserEntity::password, size = 100)
+    val avatar = varchar(UserEntity::avatar, size = 100)
+    val role = varchar(UserEntity::role, size = 100)
+    val createdAt = timestamp(UserEntity::createdAt, "created_at")
+    val updatedAt = timestamp(UserEntity::updatedAt, "updated_at")
+    val deleted = boolean(UserEntity::deleted)
 }
 
-data class UsuarioEntity(
+data class UserEntity(
     val id: UUID,
     val nombre: String,
     val email: String,

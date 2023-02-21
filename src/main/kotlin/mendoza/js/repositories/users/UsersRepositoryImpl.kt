@@ -1,14 +1,14 @@
-package joseluisgs.es.repositories.users
+package mendoza.js.repositories.users
 
-import joseluisgs.es.entities.UsersTable
-import joseluisgs.es.mappers.toEntity
-import joseluisgs.es.mappers.toModel
-import joseluisgs.es.models.User
-import joseluisgs.es.services.database.DataBaseService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
+import mendoza.js.entities.UsersTable
+import mendoza.js.mappers.toEntity
+import mendoza.js.mappers.toModel
+import mendoza.js.models.User
+import mendoza.js.service.database.DataBaseService
 import mu.KotlinLogging
 import org.koin.core.annotation.Single
 import org.mindrot.jbcrypt.BCrypt
@@ -28,9 +28,7 @@ class UsersRepositoryImpl(
 
     override suspend fun findAll(limit: Int?): Flow<User> = withContext(Dispatchers.IO) {
         logger.debug { "findAll: Buscando todos los usuarios" }
-
         val myLimit = limit ?: Int.MAX_VALUE
-
         return@withContext (dataBaseService.client selectFrom UsersTable limit myLimit.toLong())
             .fetchAll()
             .map { it.toModel() }
@@ -38,12 +36,10 @@ class UsersRepositoryImpl(
 
     override suspend fun findAll(): Flow<User> = withContext(Dispatchers.IO) {
         logger.debug { "findAll: Buscando todos los usuarios" }
-
         return@withContext (dataBaseService.client selectFrom UsersTable)
             .fetchAll()
             .map { it.toModel() }
     }
-
 
     override fun hashedPassword(password: String) = BCrypt.hashpw(password, BCrypt.gensalt(BCRYPT_SALT))
 
@@ -60,7 +56,6 @@ class UsersRepositoryImpl(
 
     override suspend fun findById(id: UUID): User? = withContext(Dispatchers.IO) {
         logger.debug { "findById: Buscando usuario con id: $id" }
-
         return@withContext (dataBaseService.client selectFrom UsersTable
                 where UsersTable.id eq id
                 ).fetchFirstOrNull()?.toModel()
@@ -68,7 +63,6 @@ class UsersRepositoryImpl(
 
     override suspend fun findByUsername(username: String): User? = withContext(Dispatchers.IO) {
         logger.debug { "findByUsername: Buscando usuario con username: $username" }
-
         return@withContext (dataBaseService.client selectFrom UsersTable
                 where UsersTable.username eq username
                 ).fetchFirstOrNull()?.toModel()
@@ -80,19 +74,12 @@ class UsersRepositoryImpl(
 
         return@withContext (dataBaseService.client insertAndReturn entity.toEntity())
             .toModel()
-
     }
 
     override suspend fun update(id: UUID, entity: User): User? = withContext(Dispatchers.IO) {
         logger.debug { "update: Actualizando usuario: $entity" }
-
-        // Buscamos, viene filtrado y si no el update no hace nada
-        // val usuario = findById(id)
-
-        // Actualizamos los datos
         entity.let {
             val updateEntity = entity.toEntity()
-
             val res = (dataBaseService.client update UsersTable
                     set UsersTable.nombre eq updateEntity.nombre
                     set UsersTable.email eq updateEntity.email
@@ -114,9 +101,6 @@ class UsersRepositoryImpl(
 
     override suspend fun delete(entity: User): User? = withContext(Dispatchers.IO) {
         logger.debug { "delete: Eliminando usuario con id: ${entity.id}" }
-
-        //val usuario = findById(id)
-
         entity.let {
             val res = (dataBaseService.client deleteFrom UsersTable
                     where UsersTable.id eq it.id)

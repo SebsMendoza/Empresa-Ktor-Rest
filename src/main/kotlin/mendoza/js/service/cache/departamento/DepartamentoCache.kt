@@ -1,4 +1,7 @@
 package mendoza.js.service.cache.departamento
 
-interface DepartamentoCache {
-}
+import mendoza.js.models.Departamento
+import mendoza.js.service.cache.ICache
+import java.util.UUID
+
+interface DepartamentoCache : ICache<UUID, Departamento>

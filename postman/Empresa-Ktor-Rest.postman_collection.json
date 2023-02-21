@@ -1,169 +1,13 @@
 {
 	"info": {
-		"_postman_id": "656e21d8-4c1f-4e6d-91a3-464b63abe3b0",
+		"_postman_id": "ac7b18a6-4ab0-450f-b2d0-2e7fa0053306",
 		"name": "Empresa-Ktor-Rest",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "11271351"
+		"_exporter_id": "19419657"
 	},
 	"item": [
 		{
-			"name": "Test",
-			"item": [
-				{
-					"name": "GET ALL Test",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:6969/api/test",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "6969",
-							"path": [
-								"api",
-								"test"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GET BY ID Test",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:6969/api/test/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "6969",
-							"path": [
-								"api",
-								"test",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "POST Test",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"message\": \"TEST POST\",\n    \"createdAt\": \"2023-01-25T17:37:07.332609924\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:6969/api/test",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "6969",
-							"path": [
-								"api",
-								"test"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "PUT Test",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"message\": \"TEST UPDATE\",\n    \"createdAt\": \"2023-01-25T17:37:07.332609924\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:6969/api/test/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "6969",
-							"path": [
-								"api",
-								"test",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "PATCH Test",
-					"request": {
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"message\": \"TEST UPDATE\",\n    \"createdAt\": \"2023-01-25T17:37:07.332609924\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:6969/api/test/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "6969",
-							"path": [
-								"api",
-								"test",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "DELETE Test",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:6969/api/test/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "6969",
-							"path": [
-								"api",
-								"test",
-								"1"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Representantes",
+			"name": "Departamento",
 			"item": [
 				{
 					"name": "GET ALL",
@@ -171,7 +15,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:6969/api/representantes",
+							"raw": "http://localhost:6969/api/departamentos",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -179,37 +23,7 @@
 							"port": "6969",
 							"path": [
 								"api",
-								"representantes"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GET ALL Pageable",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:6969/api/representantes?page=2&perPage=1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "6969",
-							"path": [
-								"api",
-								"representantes"
-							],
-							"query": [
-								{
-									"key": "page",
-									"value": "2"
-								},
-								{
-									"key": "perPage",
-									"value": "1"
-								}
+								"departamentos"
 							]
 						}
 					},
@@ -221,7 +35,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:6969/api/representantes/b39a2fd2-f7d7-405d-b73c-b68a8dedbcdf",
+							"raw": "http://localhost:6969/api/departamentos/dc7845e3-2a44-4f5b-b147-d5029d07dbbf",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -229,8 +43,8 @@
 							"port": "6969",
 							"path": [
 								"api",
-								"representantes",
-								"b39a2fd2-f7d7-405d-b73c-b68a8dedbcdf"
+								"departamentos",
+								"dc7845e3-2a44-4f5b-b147-d5029d07dbbf"
 							]
 						}
 					},
@@ -243,7 +57,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"nombre\": \"Antonio Fernandez\",\n    \"email\": \"antonio@antonio.com\"\n}",
+							"raw": "{\n    \"nombre\": \"Prueba\",\n    \"presupuesto\": 30000\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -251,7 +65,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:6969/api/representantes",
+							"raw": "http://localhost:6969/api/departamentos",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -259,7 +73,7 @@
 							"port": "6969",
 							"path": [
 								"api",
-								"representantes"
+								"departamentos"
 							]
 						}
 					},
@@ -272,7 +86,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"nombre\": \"Updated\",\n    \"email\": \"updated@updated.com\"\n}",
+							"raw": "{\n    \"nombre\": \"Updated\",\n    \"presupuesto\": 0\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -280,7 +94,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:6969/api/representantes/b39a2fd2-f7d7-405d-b73c-b68a8dedbcdf",
+							"raw": "http://localhost:6969/api/departamentos/1f818724-6615-4035-97e2-4c52f5c2ad2c",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -288,8 +102,8 @@
 							"port": "6969",
 							"path": [
 								"api",
-								"representantes",
-								"b39a2fd2-f7d7-405d-b73c-b68a8dedbcdf"
+								"departamentos",
+								"1f818724-6615-4035-97e2-4c52f5c2ad2c"
 							]
 						}
 					},
@@ -310,7 +124,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:6969/api/representantes/b39a2fd2-f7d7-405d-b73c-b68a8dedbcdf",
+							"raw": "http://localhost:6969/api/departamentos/1f818724-6615-4035-97e2-4c52f5c2ad2c",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -318,35 +132,8 @@
 							"port": "6969",
 							"path": [
 								"api",
-								"representantes",
-								"b39a2fd2-f7d7-405d-b73c-b68a8dedbcdf"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "FIND BY",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:6969/api/representantes/find?nombre=Pepe Perez",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "6969",
-							"path": [
-								"api",
-								"representantes",
-								"find"
-							],
-							"query": [
-								{
-									"key": "nombre",
-									"value": "Pepe Perez"
-								}
+								"departamentos",
+								"1f818724-6615-4035-97e2-4c52f5c2ad2c"
 							]
 						}
 					},
@@ -355,7 +142,7 @@
 			]
 		},
 		{
-			"name": "Raquetas",
+			"name": "Empleado",
 			"item": [
 				{
 					"name": "GET ALL",
@@ -363,7 +150,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:6969/api/raquetas",
+							"raw": "http://localhost:6969/api/empleados",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -371,37 +158,7 @@
 							"port": "6969",
 							"path": [
 								"api",
-								"raquetas"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GET ALL Pageable",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:6969/api/raquetas?page=2&perPage=1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "6969",
-							"path": [
-								"api",
-								"raquetas"
-							],
-							"query": [
-								{
-									"key": "page",
-									"value": "2"
-								},
-								{
-									"key": "perPage",
-									"value": "1"
-								}
+								"empleados"
 							]
 						}
 					},
@@ -413,7 +170,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:6969/api/raquetas/86084458-4733-4d71-a3db-34b50cd8d68f",
+							"raw": "http://localhost:6969/api/empleados/7eff6fdb-66c1-48ce-ae99-125419526693",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -421,8 +178,8 @@
 							"port": "6969",
 							"path": [
 								"api",
-								"raquetas",
-								"86084458-4733-4d71-a3db-34b50cd8d68f"
+								"empleados",
+								"7eff6fdb-66c1-48ce-ae99-125419526693"
 							]
 						}
 					},
@@ -435,7 +192,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"marca\": \"Created\",\n    \"precio\": \"199.8\",\n    \"representanteId\": \"b39a2fd2-f7d7-405d-b73c-b68a8dedbcdf\"\n}",
+							"raw": "{\n    \"nombre\": \"Prueba\",\n    \"salario\": 30000\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -443,7 +200,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:6969/api/raquetas",
+							"raw": "http://localhost:6969/api/empleados",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -451,7 +208,7 @@
 							"port": "6969",
 							"path": [
 								"api",
-								"raquetas"
+								"empleados"
 							]
 						}
 					},
@@ -464,7 +221,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"marca\": \"Updated\",\n    \"precio\": \"166.6\",\n    \"representanteId\": \"b39a2fd2-f7d7-405d-b73c-b68a8dedbcdf\"\n}",
+							"raw": "{\n    \"nombre\": \"Updated\",\n    \"salario\": 150000\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -472,7 +229,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:6969/api/raquetas/8061e439-6ec4-4327-bc7c-9e0181c4efcb",
+							"raw": "http://localhost:6969/api/empleados/d3fda169-6bd8-4757-9fcf-dc1c38135512",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -480,8 +237,8 @@
 							"port": "6969",
 							"path": [
 								"api",
-								"raquetas",
-								"8061e439-6ec4-4327-bc7c-9e0181c4efcb"
+								"empleados",
+								"d3fda169-6bd8-4757-9fcf-dc1c38135512"
 							]
 						}
 					},
@@ -502,7 +259,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:6969/api/raquetas/8061e439-6ec4-4327-bc7c-9e0181c4efcb",
+							"raw": "http://localhost:6969/api/empleados/d3fda169-6bd8-4757-9fcf-dc1c38135512",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -510,271 +267,8 @@
 							"port": "6969",
 							"path": [
 								"api",
-								"raquetas",
-								"8061e439-6ec4-4327-bc7c-9e0181c4efcb"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "FIND BY",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:6969/api/raquetas/find?marca=Babolat",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "6969",
-							"path": [
-								"api",
-								"raquetas",
-								"find"
-							],
-							"query": [
-								{
-									"key": "marca",
-									"value": "Babolat"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GET REPRESENTANTE",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:6969/api/raquetas/86084458-4733-4d71-a3db-34b50cd8d68f/representante",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "6969",
-							"path": [
-								"api",
-								"raquetas",
-								"86084458-4733-4d71-a3db-34b50cd8d68f",
-								"representante"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Tenistas",
-			"item": [
-				{
-					"name": "GET ALL",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:6969/api/tenistas",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "6969",
-							"path": [
-								"api",
-								"tenistas"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GET ALL Pageable",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:6969/api/tenistas?page=2&perPage=1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "6969",
-							"path": [
-								"api",
-								"tenistas"
-							],
-							"query": [
-								{
-									"key": "page",
-									"value": "2"
-								},
-								{
-									"key": "perPage",
-									"value": "1"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GET BY ID",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:6969/api/tenistas/a711040a-fb0d-4fe4-b726-75883ca8d907",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "6969",
-							"path": [
-								"api",
-								"tenistas",
-								"a711040a-fb0d-4fe4-b726-75883ca8d907"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "POST",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"nombre\": \"Created\",\n    \"ranking\": 99,\n    \"fechaNacimiento\": \"2003-05-05\",\n    \"añoProfesional\": 2019,\n    \"altura\": 185,\n    \"peso\": 80,\n    \"manoDominante\": \"DERECHA\",\n    \"tipoReves\": \"DOS_MANOS\",\n    \"puntos\": 6880,\n    \"pais\": \"España\",\n    \"raquetaId\": \"86084458-4733-4d71-a3db-34b50cd8d68f\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:6969/api/tenistas",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "6969",
-							"path": [
-								"api",
-								"tenistas"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "PUT",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"nombre\": \"Updated\",\n    \"ranking\": 99,\n    \"fechaNacimiento\": \"2003-05-05\",\n    \"añoProfesional\": 2019,\n    \"altura\": 185,\n    \"peso\": 80,\n    \"manoDominante\": \"DERECHA\",\n    \"tipoReves\": \"DOS_MANOS\",\n    \"puntos\": 6880,\n    \"pais\": \"España\",\n    \"raquetaId\": \"86084458-4733-4d71-a3db-34b50cd8d68f\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:6969/api/tenistas/a711040a-fb0d-4fe4-b726-75883ca8d907",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "6969",
-							"path": [
-								"api",
-								"tenistas",
-								"a711040a-fb0d-4fe4-b726-75883ca8d907"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "DELETE",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:6969/api/tenistas/a711040a-fb0d-4fe4-b726-75883ca8d907",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "6969",
-							"path": [
-								"api",
-								"tenistas",
-								"a711040a-fb0d-4fe4-b726-75883ca8d907"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "FIND BY",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:6969/api/tenistas/find?nombre=Rafael Nadal",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "6969",
-							"path": [
-								"api",
-								"tenistas",
-								"find"
-							],
-							"query": [
-								{
-									"key": "nombre",
-									"value": "Rafael Nadal"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "FIND BY Ranking",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:6969/api/tenistas/ranking/2",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "6969",
-							"path": [
-								"api",
-								"tenistas",
-								"ranking",
-								"2"
+								"empleados",
+								"d3fda169-6bd8-4757-9fcf-dc1c38135512"
 							]
 						}
 					},
@@ -792,7 +286,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"nombre\": \"create\",\n    \"email\": \"create@create.com\",\n    \"username\": \"create\",\n    \"password\": \"create1234\"\n\n}",
+							"raw": "{\n    \"nombre\": \"nuevo usuario\",\n    \"email\": \"nuevo@usuario.com\",\n    \"username\": \"nusu\",\n    \"password\": \"nusu1234\"\n\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -822,7 +316,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"ana\",\n    \"password\": \"ana1234\"\n}",
+							"raw": "{\n    \"username\": \"luga\",\n    \"password\": \"luga1234\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -852,7 +346,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"pepe\",\n    \"password\": \"pepe1234\"\n}",
+							"raw": "{\n    \"username\": \"ander\",\n    \"password\": \"ander1234\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -886,7 +380,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJ0ZW5pc3Rhcy1rdG9yLWF1dGgiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImlzcyI6InRlbmlzdGFzLWt0b3IiLCJ1c2VybWFpbCI6ImFuYUBsb3Blei5jb20iLCJleHAiOjE2NzQwNjIwMTgyNDAsInVzZXJJZCI6ImM1MzA2MmU0LTMxZWEtNGY1ZS1hOTlkLTM2YzIyOGVkMDFhMyIsInVzZXJuYW1lIjoiYW5hIn0.8oLHerfDdffHef5zNxPXrpJs1i3pAW1JOso0f_2OwKOAg17mE448pC_SJGm2Xlr-6GGqhnTuH8mCgc8AgFwS2w",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJlbXByZXNhLWt0b3ItcmVzdC1hdXRoIiwic3ViIjoiQXV0aGVudGljYXRpb24iLCJpc3MiOiJlbXByZXNhLWt0b3ItcmVzdCIsInVzZXJtYWlsIjoiYW5kcmVzQHJvZHJpZ3Vlei5jb20iLCJleHAiOjE2NzcwMDc0OTEsInVzZXJJZCI6ImIzOWEyZmQyLWY3ZDctNDA1ZC1iNzNjLWI2OGE4ZGVkYmNkZiIsInVzZXJuYW1lIjoiYW5kZXIifQ.RosqeuUb9ubAB2McvUmTSrEM9Kx2E3w47z9Ce8uAy8EOxr_P0u3mKPeUGKVxhjy7uUbL4gvFlexO_NufSmVhwg",
 									"type": "string"
 								}
 							]
@@ -919,59 +413,6 @@
 					"response": []
 				},
 				{
-					"name": "PATCH Me Avatar",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJ0ZW5pc3Rhcy1rdG9yLWF1dGgiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImlzcyI6InRlbmlzdGFzLWt0b3IiLCJ1c2VybWFpbCI6ImFuYUBsb3Blei5jb20iLCJleHAiOjE2NzQwNjIwMTgyNDAsInVzZXJJZCI6ImM1MzA2MmU0LTMxZWEtNGY1ZS1hOTlkLTM2YzIyOGVkMDFhMyIsInVzZXJuYW1lIjoiYW5hIn0.8oLHerfDdffHef5zNxPXrpJs1i3pAW1JOso0f_2OwKOAg17mE448pC_SJGm2Xlr-6GGqhnTuH8mCgc8AgFwS2w",
-									"type": "string"
-								}
-							]
-						},
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "file",
-									"type": "file",
-									"src": "/home/joseluisgs/Proyectos/tenistas-rest-ktor/postman/imagen.png"
-								},
-								{
-									"key": "username",
-									"value": "pepe",
-									"type": "text",
-									"disabled": true
-								},
-								{
-									"key": "",
-									"type": "file",
-									"src": [],
-									"disabled": true
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:6969/api/users/me",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "6969",
-							"path": [
-								"api",
-								"users",
-								"me"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "PUT Me Update Info",
 					"request": {
 						"auth": {
@@ -979,7 +420,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJ0ZW5pc3Rhcy1rdG9yLWF1dGgiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImlzcyI6InRlbmlzdGFzLWt0b3IiLCJ1c2VybWFpbCI6ImFuYUBsb3Blei5jb20iLCJleHAiOjE2NzQwNjIwMTgyNDAsInVzZXJJZCI6ImM1MzA2MmU0LTMxZWEtNGY1ZS1hOTlkLTM2YzIyOGVkMDFhMyIsInVzZXJuYW1lIjoiYW5hIn0.8oLHerfDdffHef5zNxPXrpJs1i3pAW1JOso0f_2OwKOAg17mE448pC_SJGm2Xlr-6GGqhnTuH8mCgc8AgFwS2w",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJlbXByZXNhLWt0b3ItcmVzdC1hdXRoIiwic3ViIjoiQXV0aGVudGljYXRpb24iLCJpc3MiOiJlbXByZXNhLWt0b3ItcmVzdCIsInVzZXJtYWlsIjoiYW5kcmVzQHJvZHJpZ3Vlei5jb20iLCJleHAiOjE2NzcwMTAwMzksInVzZXJJZCI6ImIzOWEyZmQyLWY3ZDctNDA1ZC1iNzNjLWI2OGE4ZGVkYmNkZiIsInVzZXJuYW1lIjoiYW5kZXIifQ.8EQPfzw2tAuPHbyUavSLazpniUxetr_qNWhFzbVFG9T85M_OULQC4CPCnrmnACt6m4Wz6XiXP3m0BhssLLZ9yA",
 									"type": "string"
 								}
 							]
@@ -988,7 +429,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"nombre\": \"Ana Lopez Updated\",\n    \"email\": \"updated@lopez.com\",\n    \"username\": \"anaupdated\"\n}",
+							"raw": "{\n    \"nombre\": \"Andres Rodriguez Updated\",\n    \"email\": \"updated@rodriguez.com\",\n    \"username\": \"anderupdated\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1022,7 +463,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJ0ZW5pc3Rhcy1rdG9yLWF1dGgiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImlzcyI6InRlbmlzdGFzLWt0b3IiLCJ1c2VybWFpbCI6InBlcGVAcGVyZXouY29tIiwiZXhwIjoxNjc0MDYzNDY1OTA3LCJ1c2VySWQiOiJiMzlhMmZkMi1mN2Q3LTQwNWQtYjczYy1iNjhhOGRlZGJjZGYiLCJ1c2VybmFtZSI6InBlcGUifQ._HqJll8OmEZSEV0v4m2NPEV0bE9VyZidsPZ40dkT7oxkWbYU5mVD_UUY2gFcUQp0Cu13ViKKsrXwcmQAa5WMiQ",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJlbXByZXNhLWt0b3ItcmVzdC1hdXRoIiwic3ViIjoiQXV0aGVudGljYXRpb24iLCJpc3MiOiJlbXByZXNhLWt0b3ItcmVzdCIsInVzZXJtYWlsIjoiYW5kcmVzQHJvZHJpZ3Vlei5jb20iLCJleHAiOjE2NzcwMTAwMzksInVzZXJJZCI6ImIzOWEyZmQyLWY3ZDctNDA1ZC1iNzNjLWI2OGE4ZGVkYmNkZiIsInVzZXJuYW1lIjoiYW5kZXIifQ.8EQPfzw2tAuPHbyUavSLazpniUxetr_qNWhFzbVFG9T85M_OULQC4CPCnrmnACt6m4Wz6XiXP3m0BhssLLZ9yA",
 									"type": "string"
 								}
 							]
@@ -1049,125 +490,6 @@
 								"api",
 								"users",
 								"list"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Storage",
-			"item": [
-				{
-					"name": "GET Check",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:6969/api/storage/check",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "6969",
-							"path": [
-								"api",
-								"storage",
-								"check"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "POST File Binary",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "file",
-							"file": {
-								"src": "/home/joseluisgs/Proyectos/tenistas-rest-ktor/postman/imagen.png"
-							}
-						},
-						"url": {
-							"raw": "http://localhost:6969/api/storage",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "6969",
-							"path": [
-								"api",
-								"storage"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GET File by Name",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "file",
-							"file": {
-								"src": ""
-							}
-						},
-						"url": {
-							"raw": "http://localhost:6969/api/storage/c53062e4-31ea-4f5e-a99d-36c228ed01a3.png",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "6969",
-							"path": [
-								"api",
-								"storage",
-								"c53062e4-31ea-4f5e-a99d-36c228ed01a3.png"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "DELETE File by Name (auth)",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJ0ZW5pc3Rhcy1rdG9yLWF1dGgiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImlzcyI6InRlbmlzdGFzLWt0b3IiLCJ1c2VybWFpbCI6ImFuYUBsb3Blei5jb20iLCJleHAiOjE2NzQxMjkxNzA0ODksInVzZXJJZCI6ImM1MzA2MmU0LTMxZWEtNGY1ZS1hOTlkLTM2YzIyOGVkMDFhMyIsInVzZXJuYW1lIjoiYW5hIn0.qXUz2DTxMPvHJetVkE2KhKxQJzNsaEjzozvPBMYuWEKaY1kPet4gBF_2vmiMV8NOUFpIpqx4mNrOcga_6cePUA",
-									"type": "string"
-								}
-							]
-						},
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "file",
-							"file": {
-								"src": ""
-							}
-						},
-						"url": {
-							"raw": "http://localhost:6969/api/storage/9465f9a2-cdb0-4519-975e-cecf3546e960",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "6969",
-							"path": [
-								"api",
-								"storage",
-								"9465f9a2-cdb0-4519-975e-cecf3546e960"
 							]
 						}
 					},
